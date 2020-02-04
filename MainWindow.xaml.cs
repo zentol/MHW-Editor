@@ -45,6 +45,8 @@ namespace MHW_Editor {
             "*.kire",
             "*.new_lb",
             "*.new_lbr",
+            "*.plfe",
+            "*.plit",
             "*.sgpa",
             "*.shl_tbl",
             "*.skl_dat",
@@ -871,6 +873,14 @@ namespace MHW_Editor {
 
             if (fileName.EndsWith(".eq_cus")) {
                 return typeof(EqCus);
+            }
+
+            if (fileName.EndsWith(".plfe")) {
+                return typeof(Plfe);
+            }
+
+            if (fileName.EndsWith(".plit")) {
+                return typeof(Plit);
             }
 
             throw new Exception($"No type found for: {fileName}");
